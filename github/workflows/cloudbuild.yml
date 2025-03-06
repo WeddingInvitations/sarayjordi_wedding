@@ -1,0 +1,29 @@
+
+name: Deploy to App Engine and Create Cloud Build Trigger
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Enable required APIs
+        run: |
+          gcloud services enable appengine.googleapis.com
+          gcloud services enable cloudbuild.googleapis.com
+          gcloud services enable appengineadmin.googleapis.com
+        env:
+          CLOUDSDK_CORE_DISABLE_PROMPTS: 1
+
+      - name: Deploy to App Engine
+        run: |
+          gcloud app deploy app.yaml
+        env:
+          CLOUDSDK_CORE_DISABLE_PROMPTS: 1
