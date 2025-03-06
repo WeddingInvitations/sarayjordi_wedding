@@ -41,6 +41,14 @@ header {
         background-image: url('images/portada_3.png');
         height: 400px;
     }
+
+    video {
+        max-width: 30%;
+    }
+}
+
+video {
+    max-width: 30%;
 }
 
 .post-header {
