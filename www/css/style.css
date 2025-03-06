@@ -28,7 +28,7 @@ body.custom-body {
 
 header {
     background-size: contain;
-    background-clip: url('video/portada.mp4');
+    /* background-clip: url('video/portada.mp4'); */
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
