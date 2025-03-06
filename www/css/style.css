@@ -26,29 +26,29 @@ body.custom-body {
 
 /* PORTADA */
 
-header {
+/* header {
     background-size: contain;
-    /* background-clip: url('video/portada.mp4'); */
+    background-clip: url('video/portada.mp4');
     background-repeat: no-repeat;
     background-position: center;
     height: 500px;
     margin-top: 30px;
-}
+} */
 
 @media only screen and (max-width: 600px) {
-    header {
+    /* header {
         background-size: contain;
         background-image: url('images/portada_3.png');
         height: 400px;
-    }
+    } */
 
     video {
-        max-width: 30%;
+        height: 400px;
     }
 }
 
 video {
-    max-width: 30%;
+    max-width: 3400px;
 }
 
 .post-header {
