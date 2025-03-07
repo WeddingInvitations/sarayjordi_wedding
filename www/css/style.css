@@ -64,6 +64,12 @@ nav {
     z-index: 1000;
 }
 
+a:hover {
+    color: #8f746c;
+    ;
+    /* Cambia el color al pasar el ratón sobre el botón */
+}
+
 nav::after {
     content: "";
     position: absolute;
