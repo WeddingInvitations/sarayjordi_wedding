@@ -16,7 +16,7 @@ body.custom-body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    font-size: 17px;
+    font-size: 18px;
 }
 
 
@@ -25,21 +25,8 @@ body.custom-body {
 
 /* PORTADA */
 
-/* header {
-    background-size: contain;
-    background-clip: url('video/portada.mp4');
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 500px;
-    margin-top: 30px;
-} */
 
 @media only screen and (max-width: 600px) {
-    /* header {
-        background-size: contain;
-        background-image: url('images/portada_3.png');
-        height: 400px;
-    } */
 
     video {
         height: 550px;
@@ -50,10 +37,6 @@ video {
     max-width: 3400px;
 }
 
-.post-header {
-    max-width: 70%;
-    margin: 20px auto 0px;
-}
 
 nav {
     position: sticky;
@@ -81,11 +64,10 @@ nav::after {
 
 /* PLAY */
 
-#play-button {
+/* #play-button {
     width: 60px;
     height: 60px;
     background-color: #eae5e2;
-    /* Color del botón */
     border: none;
     border-radius: 50%;
     display: flex;
@@ -102,7 +84,6 @@ nav::after {
 
 #play-button:hover {
     background-color: #fbc778;
-    /* Color al pasar el cursor */
 }
 
 #play-button::before {
@@ -117,7 +98,9 @@ nav::after {
 
 audio {
     display: none;
-}
+} */
+
+
 
 /* BIENVENIDOS */
 
@@ -136,7 +119,7 @@ audio {
 
 .bienvenidos-texto p {
     text-align: center;
-    /* padding: 15px; */
+    padding: 15px;
 }
 
 .bienvenidos-texto img {
