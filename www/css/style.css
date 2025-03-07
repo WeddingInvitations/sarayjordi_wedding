@@ -119,7 +119,7 @@ audio {
 
 .bienvenidos-texto p {
     text-align: center;
-    padding: 15px;
+    /* padding: 15px; */
 }
 
 .bienvenidos-texto img {
@@ -142,13 +142,13 @@ audio {
 
 .cuenta-regresiva {
     background-image: url('images/fondo_cuenta.png');
-    background-size: contain;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
     filter: opacity(0.8);
-    height: 40vh;
+    height: 25vh;
 }
 
 
