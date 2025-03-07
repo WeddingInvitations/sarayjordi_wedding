@@ -19,6 +19,7 @@ body.custom-body {
     /* Asegura que el cuerpo ocupe al menos el 100% de la altura de la ventana */
     font-size: 17px;
     background-image: url(images/fondo_cuenta.png);
+    background-size: cover;
 }
 
 
