@@ -157,7 +157,7 @@ audio {
 } */
 
 .cuenta-regresiva {
-    background-image: url('images/fondo_cuenta.png');
+    /* background-image: url('images/fondo_cuenta.png'); */
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -436,7 +436,7 @@ audio {
 #asistencia {
     text-align: center;
     padding: 40px 20px;
-    background-color: #e6d7b3;
+    /* background-color: #e6d7b3; */
 }
 
 #asistencia h1 {
