@@ -184,16 +184,33 @@ audio {
     letter-spacing: 2px;
 }
 
-#general-information video {
-    object-fit: contain;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    max-width: -webkit-fill-available;
+
+/* Estilo para la imagen */
+.finca-image-container {
+    position: relative;
+    display: inline-block;
+    border: 5px solid #d8c8b7;
+    /* Bordes vintage */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 30px 0 30px 0;
 }
 
-.general-information-texto p {
-    text-align: center;
-    padding: 15px;
+.finca-image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #a99d8a;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
 
