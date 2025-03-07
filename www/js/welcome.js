@@ -34,7 +34,7 @@ const x = setInterval(function () {
 function initMap() {
   // const iglesia = { lat: 40.02869584738222, lng: -6.0931973312285495 };
   const finca = { lat: 41.513338993899914, lng: 2.2339041952419825 };
-  const center = { lat: 40.02869584738222, lng: -6.0931973312285495 };
+  const center = { lat: 41.513338993899914, lng: -6.0931973312285495 };
 
   var map = new google.maps.Map(document.getElementById("mapDiv"), {
     zoom: 9,
