@@ -1,5 +1,5 @@
 // Establece la fecha objetivo
-const fechaObjetivo = new Date("Oct 18, 2025 12:00:00").getTime();
+const fechaObjetivo = new Date("Nov 29, 2025 13:30:00").getTime();
 
 // Actualiza la cuenta regresiva cada 1 segundo
 const x = setInterval(function () {
@@ -32,23 +32,23 @@ const x = setInterval(function () {
 
 // Función para mostrar Google Maps
 function initMap() {
-  const iglesia = { lat: 40.02869584738222, lng: -6.0931973312285495 };
-  const finca = { lat: 40.067302039087586, lng: -5.7540020233853655 };
-  const center = { lat: 40.033812146784115, lng: -5.9174911875005956 };
+  // const iglesia = { lat: 40.02869584738222, lng: -6.0931973312285495 };
+  const finca = { lat: 41.513338993899914, lng: 2.2339041952419825 };
+  // const center = { lat: 40.033812146784115, lng: -5.9174911875005956 };
 
   var map = new google.maps.Map(document.getElementById("mapDiv"), {
     zoom: 9,
-    center: center,
+    // center: center,
     fullscreenControl: false,
     zoomControl: true,
     streetViewControl: false
   });
 
-  new google.maps.Marker ({
-    position: iglesia,
-    map,
-    title: "Santuario"
-  });
+  // new google.maps.Marker ({
+  //   position: iglesia,
+  //   map,
+  //   title: "Santuario"
+  // });
 
   new google.maps.Marker ({
     position: finca,
