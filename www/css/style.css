@@ -180,6 +180,7 @@ audio {
 #general-information h1 {
     color: #35281d;
     font-family: 'Quattrocento', serif;
+    font-style: normal;
     font-size: 35px;
     letter-spacing: 2px;
 }
@@ -365,6 +366,7 @@ audio {
 #info_interes h1 {
     color: #35281d;
     font-family: 'Quattrocento', serif;
+    font-style: normal;
     font-size: 35px;
     letter-spacing: 2px;
 }
@@ -446,10 +448,10 @@ audio {
 }
 
 #asistencia h1 {
-    font-family: 'Quattrocento', serif;
-    font-size: 35px;
     color: #35281d;
-    margin-bottom: 20px;
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-size: 35px;
     letter-spacing: 2px;
 }
 
