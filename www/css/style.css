@@ -5,7 +5,7 @@ html {
 
 /* Estilos para el texto */
 body.custom-body {
-    background-color: #dfcebd;
+    background-color: #ece5de;
     font-family: "Parkinsans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
@@ -211,6 +211,11 @@ audio {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
+}
+
+.information-texto {
+    color: #a3998e;
+    padding: 10px;
 }
 
 
