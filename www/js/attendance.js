@@ -190,7 +190,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
       var acompanante = {
         Nombre: acompananteElement.querySelector(".name").value,
         TipoInvitado: acompananteElement.querySelector(".type").value,
-        TipoInvitado: acompananteElement.querySelector(".edad").value,
+        Edad: acompananteElement.querySelector(".edad").value,
         Alergias: acompananteElement.querySelector(".allergies").value
       };
 
@@ -291,7 +291,7 @@ async function enviarEmail(emailData) {
   console.log("Email data: ", emailData);
   // Enviar los datos al servidor
   try {
-    const response = await fetch('https://us-central1-cristianymariawedding.cloudfunctions.net/enviarEmail', {
+    const response = await fetch('https://us-central1-sarayjordiwedding.cloudfunctions.net/enviarEmail', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
