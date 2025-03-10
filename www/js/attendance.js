@@ -10,10 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Seleccionar los elementos después de que el DOM esté cargado
   var checkboxNo = document.getElementById("acompanadoNo");
   var checkboxSi = document.getElementById("acompanadoSi");
-  var busNo = document.getElementById("busNo");
-  var busSi = document.getElementById("busSi");
-  var carne = document.getElementById("carne");
-  var pescado = document.getElementById("pescado");
 
 
   checkboxSi.addEventListener("change", habilitarCampoAcompanante);
@@ -159,6 +155,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   var name = document.getElementById("nombre").value;
   var phone = document.getElementById("telefono").value;
   var allergies = document.getElementById("alergias").value;
+  var allergies = document.getElementById("cancion").value;
   var attendance = document.getElementById("acompanadoSi").checked;
 
   // if (type) {
@@ -209,6 +206,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
     Teléfono: phone,
     Asistencia: attendance,
     Alergias: allergies,
+    Cancion: cancion,
     // Bus: bus,
     // Comida: comida,
     Acompañantes: acompanantes
@@ -224,6 +222,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
         ph: phone,
         att: attendance,
         ale: allergies,
+        song: cancion,
         // bus: bus,
         // comida: comida,
         gue: acompanantes
@@ -241,6 +240,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   document.getElementById("alergias").value = "";
   document.getElementById("acompanadoSi").checked = "";
   document.getElementById("acompanadoNo").checked = "";
+  document.getElementById("cancion").value = "";
   // document.getElementById("busSi").checked = "";
   // document.getElementById("busNo").checked = "";
   // document.getElementById("carne").checked = "";
