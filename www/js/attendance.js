@@ -113,7 +113,7 @@ function addAcompanante() {
   nuevoParrafo.innerHTML = `
         <div class="acompanante">
           <input type="text" placeholder="Nombre del Acompañante" class="name">
-          <select class="type" name="tipo_acompanante[] onchange="mostrarOcultarEdad(this)">
+          <select class="type" name="tipo_acompanante[]" onchange="mostrarOcultarEdad(this)">
             <option value="adulto">Adulto</option>
             <option value="adulto">Niño</option>
           </select>
