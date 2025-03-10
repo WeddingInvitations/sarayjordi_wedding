@@ -359,19 +359,15 @@ audio {
 /* INFORMACIÓN DE INTERÉS */
 
 #info_interes {
-    /* background-image: url('images/flowers.avif'); */
-    background-size: contain;
     text-align: center;
     padding: 20px;
-    /* background-color: black; */
-    filter: opacity(0.8);
 }
 
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     #info_interes {
         background-size: auto;
     }
-}
+} */
 
 #info_interes h1 {
     color: #35281d;
