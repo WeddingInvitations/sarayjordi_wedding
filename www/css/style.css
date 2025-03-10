@@ -59,8 +59,18 @@ nav::after {
     background-color: #464646;
     /* Color de la línea */
     animation: aparecerLinea 10s forwards;
-    /* Animación para hacer aparecer la línea */
 }
+
+@keyframes aparecerLinea {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+
+
 
 /* PLAY */
 
