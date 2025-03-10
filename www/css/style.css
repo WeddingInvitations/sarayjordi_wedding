@@ -140,43 +140,39 @@ audio {
 }
 
 
-/* .cuenta-regresiva {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    filter: opacity(0.7);
-    height: 300px;
-    padding: 15px;
-} */
-
 .cuenta-regresiva {
-    /* background-image: url('images/fondo_cuenta.png'); */
+    background: url('images/fondo_cuenta.png') no-repeat center center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: black;
-    filter: opacity(0.8);
-    height: 25vh;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
-
-
 
 #cuenta-atras {
     display: flex;
-    /* align-items: center; */
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 }
 
-.tiempo {
+/* .tiempo {
     text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #222;
+} */
+
+.unidad {
+    font-size: 0.8em;
 }
 
 .barra {
-    font-size: 1em;
-    color: #666;
-    margin: 0 10px;
+    font-size: 1.5em;
+    color: #bbb;
 }
+
 
 
 
@@ -377,19 +373,43 @@ audio {
     letter-spacing: 2px;
 }
 
-#info_interes h4 {
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.hotel-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.hotel-link:hover {
+    color: #0056b3;
+}
+
+.boton-telefono button {
+    background-color: #a2948b;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-#info_interes p {
-    text-align: center;
-    padding: 15px;
+.boton-telefono button:hover {
+    background-color: #753131;
 }
 
-#info_interes img {
-    max-width: 20%;
-}
-
+/* 
 .boton {
     display: inline-block;
     padding: 10px 20px;
@@ -398,52 +418,10 @@ audio {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-}
+} */
 
-.slider {
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    max-width: 800px;
-    margin: auto;
-}
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
 
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 20px;
-}
-
-.nav {
-    background-color: #00000000;
-    border: none;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.nav.prev {
-    left: 10px;
-}
-
-.nav.next {
-    right: 10px;
-}
-
-.nav:focus {
-    outline: none;
-}
 
 /* ASISTENCIA */
 
