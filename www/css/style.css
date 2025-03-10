@@ -724,8 +724,8 @@ button#submit:active {
 
 /* FOOTER */
 .pre-footer {
-    max-width: 80%;
-    margin: 0px 0px 0px 35px;
+    max-width: 100%;
+    mask-image: linear-gradient(to top, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
 }
 
 
