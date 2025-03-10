@@ -690,6 +690,37 @@ button#submit:active {
 }
 
 
+/* REGALOS */
+
+#regalos {
+    text-align: center;
+    padding: 20px;
+}
+
+#regalos h1 {
+    color: #35281d;
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-size: 35px;
+    letter-spacing: 2px;
+}
+
+.regalos-texto p {
+    text-align: justify;
+    padding: 20px;
+    padding: 10px;
+}
+
+.plain-text {
+    color: black;
+    background: none;
+    font-family: 'Quattrocento', serif;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
 
 /* FOOTER */
 .pre-footer {
