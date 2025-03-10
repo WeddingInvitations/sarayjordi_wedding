@@ -155,7 +155,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   var name = document.getElementById("nombre").value;
   var phone = document.getElementById("telefono").value;
   var allergies = document.getElementById("alergias").value;
-  var allergies = document.getElementById("cancion").value;
+  var song = document.getElementById("cancion").value;
   var attendance = document.getElementById("acompanadoSi").checked;
 
   // if (type) {
@@ -206,7 +206,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
     Teléfono: phone,
     Asistencia: attendance,
     Alergias: allergies,
-    Cancion: cancion,
+    Cancion: song,
     // Bus: bus,
     // Comida: comida,
     Acompañantes: acompanantes
@@ -222,7 +222,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
         ph: phone,
         att: attendance,
         ale: allergies,
-        song: cancion,
+        song: song,
         // bus: bus,
         // comida: comida,
         gue: acompanantes
