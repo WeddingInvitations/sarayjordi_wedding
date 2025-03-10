@@ -38,23 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function habilitarBus(event) {
-    // Desmarcar el otro checkbox
-    if (busNo.checked && event.target === busSi) {
-      busNo.checked = false;
-    } else if (busSi.checked && event.target === busNo) {
-      busSi.checked = false;
-    }
-  }
+  // function habilitarBus(event) {
+  //   // Desmarcar el otro checkbox
+  //   if (busNo.checked && event.target === busSi) {
+  //     busNo.checked = false;
+  //   } else if (busSi.checked && event.target === busNo) {
+  //     busSi.checked = false;
+  //   }
+  // }
 
-  function habilitarComida(event) {
-    // Desmarcar el otro checkbox
-    if (pescado.checked && event.target === carne) {
-      pescado.checked = false;
-    } else if (carne.checked && event.target === pescado) {
-      carne.checked = false;
-    }
-  }
+  // function habilitarComida(event) {
+  //   // Desmarcar el otro checkbox
+  //   if (pescado.checked && event.target === carne) {
+  //     pescado.checked = false;
+  //   } else if (carne.checked && event.target === pescado) {
+  //     carne.checked = false;
+  //   }
+  // }
     
   // Función para abrir el pop-up al hacer clic en "Sí, voy acompañado"
   function openPopup() {
@@ -113,19 +113,28 @@ function addAcompanante() {
   nuevoParrafo.innerHTML = `
         <div class="acompanante">
           <input type="text" placeholder="Nombre del Acompañante" class="name">
-          <select class="type" name="tipo_acompanante[]">
+          <select class="type" name="tipo_acompanante[] onchange="mostrarOcultarEdad(this)">
             <option value="adulto">Adulto</option>
             <option value="adulto">Niño</option>
           </select>
+          <div id="edad-container" style="display: none;">
+            <input type="number" placeholder="Edad del Niño" class="edad">
+          </div>
           <input type="text" placeholder="Alergias" class="allergies">
-          <select class="comida" name="comida">
-            <option value="carne">Carne</option>
-            <option value="pescado">Pescado</option>
-          </select>
           <br><br>
           <button id="deleteAcompananteButton">Borrar Acompañante</button>
         </div>
         `;
+
+  // Función JavaScript para mostrar/ocultar el campo de edad
+  function mostrarOcultarEdad(selectElement) {
+    const edadContainer = selectElement.parentNode.querySelector("#edad-container");
+    if (selectElement.value === "niño") {
+      edadContainer.style.display = "block";
+    } else {
+      edadContainer.style.display = "none";
+    }
+  }
 
   // Agrega el nuevo párrafo al contenido del pop-up
   popupContent.appendChild(nuevoParrafo);
