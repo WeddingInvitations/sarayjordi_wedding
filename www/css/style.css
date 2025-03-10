@@ -499,6 +499,7 @@ input[type="tel"] {
     font-size: 16px;
     color: #333333;
     transition: border-color 0.3s ease;
+    margin-bottom: 5px;
 }
 
 input[type="text"]:focus,
@@ -527,18 +528,14 @@ label[for="acompanadoNo"],
 label[for="acompanadoSi"] {
     font-size: 14px;
     color: #555555;
+    margin-bottom: 5px;
 }
 
 label[for="busSi"],
 label[for="busNo"] {
     font-size: 14px;
     color: #555555;
-}
-
-label[for="carne"],
-label[for="pescado"] {
-    font-size: 14px;
-    color: #555555;
+    margin-bottom: 5px;
 }
 
 #popup {
