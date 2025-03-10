@@ -109,34 +109,32 @@ function addAcompanante() {
   //Generar único id por fila de acompañante
   var uniqueId = generateUniqueId();
 
-  document.addEventListener('DOMContentLoaded', function() {
-    // Añade campos para nombre, tipo y alergias
-    nuevoParrafo.innerHTML = `
+  // Añade campos para nombre, tipo y alergias
+  nuevoParrafo.innerHTML = `
         <div class="acompanante">
-            <input type="text" placeholder="Nombre del Acompañante" class="name">
-            <select class="type" name="tipo_acompanante[]" onchange="mostrarOcultarEdad(this)">
-                <option value="adulto">Adulto</option>
-                <option value="niño">Niño</option>
-            </select>
-            <div id="edad-container" style="display: none;">
-                <input type="number" placeholder="Edad del Niño" class="edad" name="edad_niño">
-            </div>
-            <input type="text" placeholder="Alergias" class="allergies">
-            <br><br>
-            <button id="deleteAcompananteButton">Borrar Acompañante</button>
+          <input type="text" placeholder="Nombre del Acompañante" class="name">
+          <select class="type" name="tipo_acompanante[]">
+            <option value="adulto">Adulto</option>
+            <option value="niño">Niño</option>
+          </select>
+          <div id="edad-container">
+            <input type="number" placeholder="Edad del Niño" class="edad" name="edad_niño">
+          </div>
+          <input type="text" placeholder="Alergias" class="allergies">
+          <br><br>
+          <button id="deleteAcompananteButton">Borrar Acompañante</button>
         </div>
         `;
 
-    // Función JavaScript para mostrar/ocultar el campo de edad
-    function mostrarOcultarEdad(selectElement) {
-        const edadContainer = selectElement.parentNode.querySelector("#edad-container");
-        if (selectElement.value === "niño") {
-            edadContainer.style.display = "block";
-        } else {
-            edadContainer.style.display = "none";
-        }
+  // Función JavaScript para mostrar/ocultar el campo de edad
+  function mostrarOcultarEdad(selectElement) {
+    const edadContainer = selectElement.parentNode.querySelector("#edad-container");
+    if (selectElement.value === "niño") {
+      edadContainer.style.display = "block";
+    } else {
+      edadContainer.style.display = "none";
     }
-  });
+  }
 
   // Agrega el nuevo párrafo al contenido del pop-up
   popupContent.appendChild(nuevoParrafo);
