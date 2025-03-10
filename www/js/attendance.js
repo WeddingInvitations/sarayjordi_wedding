@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkboxSi.addEventListener("change", habilitarCampoAcompanante);
   checkboxNo.addEventListener("change", habilitarCampoAcompanante);
-  busSi.addEventListener("change", habilitarBus);
-  busNo.addEventListener("change", habilitarBus);
-  carne.addEventListener("change", habilitarComida);
-  pescado.addEventListener("change", habilitarComida);
+  // busSi.addEventListener("change", habilitarBus);
+  // busNo.addEventListener("change", habilitarBus);
+  // carne.addEventListener("change", habilitarComida);
+  // pescado.addEventListener("change", habilitarComida);
   
   // Función para habilitar el check acom y abrir pop up
   function habilitarCampoAcompanante(event) {
