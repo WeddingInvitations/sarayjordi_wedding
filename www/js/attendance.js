@@ -115,10 +115,10 @@ function addAcompanante() {
           <input type="text" placeholder="Nombre del Acompañante" class="name">
           <select class="type" name="tipo_acompanante[]" onchange="mostrarOcultarEdad(this)">
             <option value="adulto">Adulto</option>
-            <option value="adulto">Niño</option>
+            <option value="niño">Niño</option>
           </select>
           <div id="edad-container" style="display: none;">
-            <input type="number" placeholder="Edad del Niño" class="edad">
+            <input type="number" placeholder="Edad del Niño" class="edad" name="edad_niño">
           </div>
           <input type="text" placeholder="Alergias" class="allergies">
           <br><br>
