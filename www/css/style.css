@@ -377,19 +377,43 @@ audio {
     letter-spacing: 2px;
 }
 
-#info_interes h4 {
+
+.hotel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.hotel-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.hotel-link:hover {
+    color: #0056b3;
+}
+
+.boton-telefono button {
+    background-color: #753131;
     color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
-#info_interes p {
-    text-align: center;
-    padding: 15px;
+.boton-telefono button:hover {
+    background-color: #753131;
 }
 
-#info_interes img {
-    max-width: 20%;
-}
-
+/* 
 .boton {
     display: inline-block;
     padding: 10px 20px;
@@ -398,52 +422,10 @@ audio {
     text-decoration: none;
     border-radius: 5px;
     font-size: 16px;
-}
+} */
 
-.slider {
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    max-width: 800px;
-    margin: auto;
-}
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
 
-.slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    text-align: center;
-    padding: 20px;
-}
-
-.nav {
-    background-color: #00000000;
-    border: none;
-    color: white;
-    font-size: 24px;
-    padding: 10px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.nav.prev {
-    left: 10px;
-}
-
-.nav.next {
-    right: 10px;
-}
-
-.nav:focus {
-    outline: none;
-}
 
 /* ASISTENCIA */
 
