@@ -126,15 +126,6 @@ function addAcompanante() {
         </div>
         `;
 
-  // Función JavaScript para mostrar/ocultar el campo de edad
-  function mostrarOcultarEdad(selectElement) {
-    const edadContainer = selectElement.parentNode.querySelector("#edad-container");
-    if (selectElement.value === "niño") {
-      edadContainer.style.display = "block";
-    } else {
-      edadContainer.style.display = "none";
-    }
-  }
 
   // Agrega el nuevo párrafo al contenido del pop-up
   popupContent.appendChild(nuevoParrafo);
@@ -176,14 +167,14 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   //   type = "Niño";
   // }
 
-  var bus = document.getElementById("busSi").checked;
-  var comida = document.getElementById("carne").checked;
+  // var bus = document.getElementById("busSi").checked;
+  // var comida = document.getElementById("carne").checked;
 
-  if (comida) {
-    comida = "Carne";
-  } else {
-    comida = "Pescado";
-  }
+  // if (comida) {
+  //   comida = "Carne";
+  // } else {
+  //   comida = "Pescado";
+  // }
   
   // Crear un array para almacenar los acompañantes
   var acompanantes = [];
@@ -199,8 +190,8 @@ document.getElementById('attendance-form').addEventListener("submit", function (
       var acompanante = {
         Nombre: acompananteElement.querySelector(".name").value,
         TipoInvitado: acompananteElement.querySelector(".type").value,
-        Alergias: acompananteElement.querySelector(".allergies").value,
-        Comida: acompananteElement.querySelector(".comida").value
+        TipoInvitado: acompananteElement.querySelector(".edad").value,
+        Alergias: acompananteElement.querySelector(".allergies").value
       };
 
       // acompanantes.push(acompanante);
@@ -218,8 +209,8 @@ document.getElementById('attendance-form').addEventListener("submit", function (
     Teléfono: phone,
     Asistencia: attendance,
     Alergias: allergies,
-    Bus: bus,
-    Comida: comida,
+    // Bus: bus,
+    // Comida: comida,
     Acompañantes: acompanantes
   })
     .then(function (docRef) {
@@ -233,8 +224,8 @@ document.getElementById('attendance-form').addEventListener("submit", function (
         ph: phone,
         att: attendance,
         ale: allergies,
-        bus: bus,
-        comida: comida,
+        // bus: bus,
+        // comida: comida,
         gue: acompanantes
       };
       enviarEmail(emailData);
@@ -250,10 +241,10 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   document.getElementById("alergias").value = "";
   document.getElementById("acompanadoSi").checked = "";
   document.getElementById("acompanadoNo").checked = "";
-  document.getElementById("busSi").checked = "";
-  document.getElementById("busNo").checked = "";
-  document.getElementById("carne").checked = "";
-  document.getElementById("pescado").checked = "";
+  // document.getElementById("busSi").checked = "";
+  // document.getElementById("busNo").checked = "";
+  // document.getElementById("carne").checked = "";
+  // document.getElementById("pescado").checked = "";
   // document.getElementById("adulto").checked = "";
   // document.getElementById("nino").checked = "";
 
