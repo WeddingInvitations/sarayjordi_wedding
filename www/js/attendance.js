@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   checkboxSi.addEventListener("change", habilitarCampoAcompanante);
   checkboxNo.addEventListener("change", habilitarCampoAcompanante);
-  busSi.addEventListener("change", habilitarBus);
-  busNo.addEventListener("change", habilitarBus);
-  carne.addEventListener("change", habilitarComida);
-  pescado.addEventListener("change", habilitarComida);
+  // busSi.addEventListener("change", habilitarBus);
+  // busNo.addEventListener("change", habilitarBus);
+  // carne.addEventListener("change", habilitarComida);
+  // pescado.addEventListener("change", habilitarComida);
   
   // Función para habilitar el check acom y abrir pop up
   function habilitarCampoAcompanante(event) {
@@ -38,23 +38,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function habilitarBus(event) {
-    // Desmarcar el otro checkbox
-    if (busNo.checked && event.target === busSi) {
-      busNo.checked = false;
-    } else if (busSi.checked && event.target === busNo) {
-      busSi.checked = false;
-    }
-  }
+  // function habilitarBus(event) {
+  //   // Desmarcar el otro checkbox
+  //   if (busNo.checked && event.target === busSi) {
+  //     busNo.checked = false;
+  //   } else if (busSi.checked && event.target === busNo) {
+  //     busSi.checked = false;
+  //   }
+  // }
 
-  function habilitarComida(event) {
-    // Desmarcar el otro checkbox
-    if (pescado.checked && event.target === carne) {
-      pescado.checked = false;
-    } else if (carne.checked && event.target === pescado) {
-      carne.checked = false;
-    }
-  }
+  // function habilitarComida(event) {
+  //   // Desmarcar el otro checkbox
+  //   if (pescado.checked && event.target === carne) {
+  //     pescado.checked = false;
+  //   } else if (carne.checked && event.target === pescado) {
+  //     carne.checked = false;
+  //   }
+  // }
     
   // Función para abrir el pop-up al hacer clic en "Sí, voy acompañado"
   function openPopup() {
@@ -115,17 +115,17 @@ function addAcompanante() {
           <input type="text" placeholder="Nombre del Acompañante" class="name">
           <select class="type" name="tipo_acompanante[]">
             <option value="adulto">Adulto</option>
-            <option value="adulto">Niño</option>
+            <option value="niño">Niño</option>
           </select>
+          <div id="edad-container">
+            <input type="number" placeholder="Edad del Niño" class="edad" name="edad_niño">
+          </div>
           <input type="text" placeholder="Alergias" class="allergies">
-          <select class="comida" name="comida">
-            <option value="carne">Carne</option>
-            <option value="pescado">Pescado</option>
-          </select>
           <br><br>
           <button id="deleteAcompananteButton">Borrar Acompañante</button>
         </div>
         `;
+
 
   // Agrega el nuevo párrafo al contenido del pop-up
   popupContent.appendChild(nuevoParrafo);
@@ -167,14 +167,14 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   //   type = "Niño";
   // }
 
-  var bus = document.getElementById("busSi").checked;
-  var comida = document.getElementById("carne").checked;
+  // var bus = document.getElementById("busSi").checked;
+  // var comida = document.getElementById("carne").checked;
 
-  if (comida) {
-    comida = "Carne";
-  } else {
-    comida = "Pescado";
-  }
+  // if (comida) {
+  //   comida = "Carne";
+  // } else {
+  //   comida = "Pescado";
+  // }
   
   // Crear un array para almacenar los acompañantes
   var acompanantes = [];
@@ -190,8 +190,8 @@ document.getElementById('attendance-form').addEventListener("submit", function (
       var acompanante = {
         Nombre: acompananteElement.querySelector(".name").value,
         TipoInvitado: acompananteElement.querySelector(".type").value,
-        Alergias: acompananteElement.querySelector(".allergies").value,
-        Comida: acompananteElement.querySelector(".comida").value
+        Edad: acompananteElement.querySelector(".edad").value,
+        Alergias: acompananteElement.querySelector(".allergies").value
       };
 
       // acompanantes.push(acompanante);
@@ -209,8 +209,8 @@ document.getElementById('attendance-form').addEventListener("submit", function (
     Teléfono: phone,
     Asistencia: attendance,
     Alergias: allergies,
-    Bus: bus,
-    Comida: comida,
+    // Bus: bus,
+    // Comida: comida,
     Acompañantes: acompanantes
   })
     .then(function (docRef) {
@@ -224,8 +224,8 @@ document.getElementById('attendance-form').addEventListener("submit", function (
         ph: phone,
         att: attendance,
         ale: allergies,
-        bus: bus,
-        comida: comida,
+        // bus: bus,
+        // comida: comida,
         gue: acompanantes
       };
       enviarEmail(emailData);
@@ -241,10 +241,10 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   document.getElementById("alergias").value = "";
   document.getElementById("acompanadoSi").checked = "";
   document.getElementById("acompanadoNo").checked = "";
-  document.getElementById("busSi").checked = "";
-  document.getElementById("busNo").checked = "";
-  document.getElementById("carne").checked = "";
-  document.getElementById("pescado").checked = "";
+  // document.getElementById("busSi").checked = "";
+  // document.getElementById("busNo").checked = "";
+  // document.getElementById("carne").checked = "";
+  // document.getElementById("pescado").checked = "";
   // document.getElementById("adulto").checked = "";
   // document.getElementById("nino").checked = "";
 
@@ -291,7 +291,7 @@ async function enviarEmail(emailData) {
   console.log("Email data: ", emailData);
   // Enviar los datos al servidor
   try {
-    const response = await fetch('https://us-central1-cristianymariawedding.cloudfunctions.net/enviarEmail', {
+    const response = await fetch('https://us-central1-sarayjordiwedding.cloudfunctions.net/enviarEmail', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
