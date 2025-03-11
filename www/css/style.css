@@ -428,10 +428,11 @@ audio {
 }
 
 #carrousel h1 {
-    color: #734929;
-    font-family: "Oooh Baby", cursive;
-    font-size: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #35281d;
+    font-family: 'Quattrocento', serif;
+    font-style: normal;
+    font-size: 35px;
+    letter-spacing: 2px;
 }
 
 .carrousel-texto p {
