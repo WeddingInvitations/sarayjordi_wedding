@@ -442,7 +442,7 @@ audio {
   
 .carousel-item img{
     height: 450px; /* Ajusta la altura de las imágenes */
-    width: 20% !important;
+    width: 100% !important;
     object-fit: cover; /* Asegúrate de que las imágenes se escalen correctamente */
     margin-left: 40%;
 }
