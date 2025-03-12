@@ -767,6 +767,16 @@ button#submit:active {
     transition: background-color 0.3s ease;
 }
 
+.contacto-info a {
+    display: inline-block;
+    background-color: #a2948b;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
 
 /* REGALOS */
 
