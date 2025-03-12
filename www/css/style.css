@@ -767,7 +767,7 @@ button#submit:active {
     transition: background-color 0.3s ease;
 }
 
-.contacto-info a {
+.contacto-info b {
     display: inline-block;
     background-color: #a2948b;
     color: white;
