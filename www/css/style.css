@@ -27,16 +27,18 @@ body.custom-body {
 
 
 @media only screen and (max-width: 600px) {
-
     video {
         height: 550px;
     }
 }
 
 video {
-    max-width: 3400px;
+    max-width: 400px;
 }
 
+header {
+    background-size: contain;
+}
 
 nav {
     position: sticky;
