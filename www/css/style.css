@@ -37,7 +37,10 @@ video {
 }
 
 header {
-    background-size: contain;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 nav {
