@@ -823,6 +823,13 @@ button#submit:active {
     height: 410px;
 }
 
+@media only screen and (max-width: 600px) {
+    .pre-footer {
+        max-width: 100%;
+        mask-image: linear-gradient(to top, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+    }
+}
+
 
 footer {
     background-color: #6d6357;
