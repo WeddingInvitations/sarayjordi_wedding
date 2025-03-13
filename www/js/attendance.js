@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // busNo.addEventListener("change", habilitarBus);
   // carne.addEventListener("change", habilitarComida);
   // pescado.addEventListener("change", habilitarComida);
-  
+
   // Función para habilitar el check acom y abrir pop up
   function habilitarCampoAcompanante(event) {
     // Desmarcar el otro checkbox
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //     carne.checked = false;
   //   }
   // }
-    
+
   // Función para abrir el pop-up al hacer clic en "Sí, voy acompañado"
   function openPopup() {
     var popup = document.getElementById('popup');
@@ -113,8 +113,8 @@ function addAcompanante() {
             <option value="adulto">Adulto</option>
             <option value="niño">Niño</option>
           </select>
-          <div id="edad-container">
-            <input type="number" placeholder="Edad del Niño" class="edad" name="edad_niño">
+          <div class="edad-container"  style="display: none;">
+            <input type="number" placeholder="Edad del menor" class="edad" name="edad_niño">
           </div>
           <input type="text" placeholder="Alergias" class="allergies">
           <br><br>
@@ -123,13 +123,27 @@ function addAcompanante() {
         `;
 
 
+  // Selecciona los elementos necesarios dentro del nuevo acompañante
+  let selectTipo = nuevoParrafo.querySelector(".type");
+  let edadContainer = nuevoParrafo.querySelector(".edad-container");
+
+
+  // Agrega un evento para mostrar/ocultar el campo de edad
+  selectTipo.addEventListener("change", function () {
+    if (selectTipo.value === "niño") {
+      edadContainer.style.display = "block"; // Muestra el campo de edad
+    } else {
+      edadContainer.style.display = "none"; // Oculta el campo de edad
+    }
+  });
+
   // Agrega el nuevo párrafo al contenido del pop-up
   popupContent.appendChild(nuevoParrafo);
 
   // Eliminar acompañantes
   var rmButton = nuevoParrafo.querySelector('#deleteAcompananteButton');
   if (rmButton) {
-    rmButton.addEventListener("click", function() {
+    rmButton.addEventListener("click", function () {
       deleteAcompanante(nuevoParrafo);
     });
   }
@@ -172,7 +186,7 @@ document.getElementById('attendance-form').addEventListener("submit", function (
   // } else {
   //   comida = "Pescado";
   // }
-  
+
   // Crear un array para almacenar los acompañantes
   var acompanantes = [];
 
@@ -292,11 +306,11 @@ async function enviarEmail(emailData) {
   // Enviar los datos al servidor
   try {
     const response = await fetch('https://us-central1-sarayjordiwedding.cloudfunctions.net/enviarEmail', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(emailData)
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(emailData)
     });
 
     const data = await response.json();
