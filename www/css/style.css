@@ -245,10 +245,9 @@ audio {
 
 .timeline {
     position: relative;
-    margin: 50px 0;
     padding-left: 40px;
     border-left: 3px solid black;
-    margin-left: 660px;
+    margin-left: 29%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -257,6 +256,12 @@ audio {
         margin: 50px 0;
         padding-left: 40px;
         border-left: 3px solid black;
+    }
+
+    .event .icon img {
+        /* width: 30px;
+        height: 30px; */
+        max-width: 22%;
     }
 }
 
@@ -292,7 +297,7 @@ audio {
 .event .icon img {
     /* width: 30px;
     height: 30px; */
-    max-width: 22%;
+    max-width: 15%;
 }
 
 .event .description {
