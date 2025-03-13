@@ -514,6 +514,7 @@ audio {
         height: 450px; /* Ajusta la altura de las imágenes */
         object-fit: cover; /* Asegúrate de que las imágenes se escalen correctamente */
         margin-left: 0%;
+        width: 100% !important;
     }
 
     .carousel-caption {
