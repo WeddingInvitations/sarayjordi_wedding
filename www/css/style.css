@@ -485,8 +485,8 @@ audio {
 }
   
 .carousel-item img{
-    height: 450px; /* Ajusta la altura de las imágenes */
-    width: 100% !important;
+    height: auto; /* Ajusta la altura de las imágenes */
+    width: 40% !important;
     object-fit: cover; /* Asegúrate de que las imágenes se escalen correctamente */
     margin-left: 40%;
 }
@@ -773,6 +773,20 @@ button#submit:active {
     transition: background-color 0.3s ease;
 }
 
+@media only screen and (max-width: 600px) {
+    .contacto-info b {
+        display: inline-block;
+        background-color: #a2948b;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        font-size: 10px;
+    }
+}
+
 .contacto-info b {
     display: inline-block;
     background-color: #a2948b;
@@ -782,7 +796,7 @@ button#submit:active {
     border-radius: 25px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 /* REGALOS */
