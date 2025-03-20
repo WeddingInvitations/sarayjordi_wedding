@@ -303,6 +303,7 @@ audio {
 
 .event .time {
     width: 100px;
+    margin-left: 20px;
 }
 
 /* .event .icon {
