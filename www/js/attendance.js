@@ -111,7 +111,7 @@ function addAcompanante() {
           <input type="text" placeholder="Nombre del Acompañante" class="name">
           <select class="type" name="tipo_acompanante[]">
             <option value="adulto">Adulto</option>
-            <option value="niño">Niño</option>
+            <option value="niño">Menor</option>
           </select>
           <div class="edad-container"  style="display: none;">
             <input type="number" placeholder="Edad del menor" class="edad" name="edad_niño">
