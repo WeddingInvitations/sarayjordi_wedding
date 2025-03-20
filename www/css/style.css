@@ -21,20 +21,7 @@ body.custom-body {
 
 
 
-
-
 /* PORTADA */
-
-
-@media only screen and (max-width: 600px) {
-    video {
-        height: 550px;
-    }
-}
-
-video {
-    max-width: 400px;
-}
 
 header {
     display: grid !important;
@@ -42,6 +29,46 @@ header {
     overflow: hidden;
     position: relative;
 }
+
+video {
+    max-width: 400px;
+}
+
+@media only screen and (max-width: 600px) {
+    video {
+        height: 550px;
+        max-width: 100%;
+        /* Asegura que el video no se desborde */
+    }
+}
+
+/* HEADER adaptado */
+.pre-header {
+    mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
+    height: auto;
+    margin: auto;
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    /* Muestra el video para móviles */
+    .pre-header.video {
+        display: block;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 769px) {
+
+    /* Muestra la imagen para escritorio */
+    .pre-header.desktop {
+        display: block;
+        width: 100vw;
+    }
+}
+
+
 
 nav {
     position: sticky;
