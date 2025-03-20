@@ -554,6 +554,7 @@ audio {
         height: 450px;
         object-fit: cover;
         width: 100% !important;
+        max-width: 100%;
     }
 
     .carousel-caption {
