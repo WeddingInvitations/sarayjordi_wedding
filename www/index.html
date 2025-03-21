@@ -35,6 +35,16 @@
 
 <body class="custom-body">
 
+    <!-- Autenticación -->
+  <section id="login-container" >
+    <h1>Por favor, ingresa la clave</h1>
+    <form id="login-form" onsubmit="authenticate(event)">
+      <label for="password">Clave:</label>
+      <input type="password" id="password" name="password" required>
+      <button type="submit">Ingresar</button>
+    </form>
+  </section>
+
   <header>
     <!-- Versión de escritorio con imagen estática -->
     <img class="pre-header desktop" src="images/header_computer.jpg" alt="Header Desktop">
