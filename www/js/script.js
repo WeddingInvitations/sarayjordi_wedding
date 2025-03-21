@@ -1,23 +1,23 @@
 // js/welcome.js
 
 // Función para autenticarse
-function authenticate(event) {
-  event.preventDefault();
+// function authenticate(event) {
+//   event.preventDefault();
 
-  var password = document.getElementById('password').value;
+//   var password = document.getElementById('password').value;
 
-  // Verificar las credenciales
-  if (password === 'Bodorrio2025') {
-      // Credenciales válidas, mostrar el contenido
-      document.getElementById('login-container').style.display = 'none';
-      document.getElementById('content-container').style.display = 'block';
-      // Almacenar en sessionStorage que el usuario ha iniciado sesión
-      sessionStorage.setItem('isLoggedIn', 'true');
-  } else {
-      // Credenciales incorrectas, mostrar un mensaje de error
-      alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
-  }
-}
+//   // Verificar las credenciales
+//   if (password === 'Bodorrio2025') {
+//       // Credenciales válidas, mostrar el contenido
+//       document.getElementById('login-container').style.display = 'none';
+//       document.getElementById('content-container').style.display = 'block';
+//       // Almacenar en sessionStorage que el usuario ha iniciado sesión
+//       sessionStorage.setItem('isLoggedIn', 'true');
+//   } else {
+//       // Credenciales incorrectas, mostrar un mensaje de error
+//       alert('Credenciales incorrectas. Por favor, inténtalo de nuevo.');
+//   }
+// }
 
 // Evento "load" inicial
 window.addEventListener("load", function () {
